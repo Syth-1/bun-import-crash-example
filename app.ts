@@ -13,7 +13,7 @@ await mkdir(folder, {recursive : true})
 
 for (let i = 0; i < fileCount; i++) { 
     const file = `file-${i+1}.ts`
-    Bun.write(folder + file, `console.log("calling from ${file}")`)
+    await Bun.write(folder + file, `console.log("calling from ${file}")`)
 
     await import(`@/${folder}${file}`)
 }
