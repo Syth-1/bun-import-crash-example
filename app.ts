@@ -4,7 +4,7 @@ import { sleep } from 'bun'
 const fileCount = 3
 const folder = "files/"
 
-if (true) { // set to false to see it successfully read files on subsequent runs.
+if (true) { // set to false to see bun successfully read files on subsequent runs.
     await rm(folder, {recursive : true})
     await sleep(2000) // visually see our directory be deleted.
 }
