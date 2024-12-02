@@ -1,11 +1,11 @@
-import { mkdir, rmdir } from 'node:fs/promises'
+import { mkdir, rm } from 'node:fs/promises'
 import { sleep } from 'bun'
 
 const fileCount = 3
 const folder = "files/"
 
 if (true) { // set to false to see it successfully read files on subsequent runs.
-    await rmdir(folder, {recursive : true})
+    await rm(folder, {recursive : true})
     await sleep(2000) // visually see our directory be deleted.
 }
 
