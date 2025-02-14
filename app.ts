@@ -6,7 +6,7 @@ const folder = "files"
 const useImportPathRemap = true // set to false to see bun work as intended
 
 if (true) { // set to false to see bun successfully read files on subsequent runs.
-    await rm(folder, {recursive : true})
+    await rm(folder, {recursive : true, force: true})
     await sleep(2000) // visually see our directory be deleted.
 }
 
